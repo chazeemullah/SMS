@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".hide").click(function(){
+                $("p").hide();
+                
+                
+            });
+            $(".show").click(function(){
+                $("p").show();
+            });
+
+            $("p").click(function(){
+                $(this).hide();
+            });
+        });
+    </script>
+    <title>Hide Button</title>
+</head>
+<body>
+    <div>
+        <h4>Hide p tag on clicking Button</h4>
+        <p>This line will hide in clicking button. </p>
+        <p>This line will also hide on clicking button.</p>
+        <button class="hide">Hide</button>
+        <button class="show">Show</button>
+    </div>
+
+    
+</body>
+</html>
