@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        
+       $(document).ready(function(){
+       $("input").focus(function(){
+       $(this).css("background-color", "yellow");
+    }),
+    $("input").blur(function(){
+        $(this).css("background-color","green");
+    });
+        });
+
+        
+        $(document).ready(function(){
+    $("#hide").on("click", function(){
+      $("h4").hide();  
+    }),
+    $("#hide").on("dblclick", function(){
+        $("h4").show();
+    });
+})
+    </script>
+    <title>Events</title>
+</head>
+<body>
+    <div>
+        <h4>On Focus color change</h4>
+      <label for="">Name: </label> <input type="text">
+      <button id="hide">Click Here</button>
+    </div>
+
+    
+</body>
+</html>
