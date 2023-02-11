@@ -9,6 +9,16 @@
         $(document).ready(function(){
             $("#animate").click(function(){
                 $("#move").animate({left: '250px', width: '150px', height: '150px'}, "slow");
+            }),
+            $("#toggle").click(function(){
+                $("#move1").animate({height:'toggle'});
+            }),
+            $(".queue").click(function(){
+                    let div = $("#move2");
+                div.animate({height:'300px', opacity:'0.4'}, "slow");
+                div.animate({width:'300px', opacity:'0.7'}, "slow");
+                div.animate({height:'100px', opacity:'0.4'}, "slow");
+                div.animate({width:'100px', opacity:'0.7'}, "slow");        
             });
         })
     </script>
@@ -17,6 +27,12 @@
 <body>
     <p>Click the below button to animate the box.</p>
     <button id="animate">Click Here</button> <br> <br>
-    <div id="move" style="background-color: red; width: 100px; height: 100px; position: absolute;"></div>
+    <div id="move" style="background-color: red; width: 100px; height: 100px; position: ralative;"></div> <br> <br>
+
+    <button id="toggle">Hide/Show</button> <br> <br>
+    <div id="move1" style="background-color: greenyellow; width: 100px; height: 100px; position: relative;"></div> <br><br>
+
+    <button class="queue">Animate</button> <br> <br>
+    <div id="move2" style="background-color: green; width: 100px; height: 100px; position: relative;"></div>
 </body>
 </html>
